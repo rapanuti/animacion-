@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Centinela · SVG animado</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f4f6f8; color: #14315c; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.4rem; }
+  .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .caja { border-radius: 12px; padding: 24px; display: grid; place-items: center; min-height: 160px; }
+  .clara { background: #ffffff; }
+  .oscura { background: #0f1e36; }
+  .completo { width: 100%; max-width: 420px; height: auto; }
+  .escudo { width: 120px; height: auto; }
+  .chico { width: 40px; height: auto; }
+  pre { background: #fff; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: .8rem; }
+  @media (max-width: 600px) { .fila { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>SVG animado: logo completo</h1>
+  <div class="fila">
+    <div class="caja clara"><img class="completo" src="logo_completo/mi_centinela_completo.svg" alt="Mi Centinela"></div>
+    <div class="caja oscura"><img class="completo" src="logo_completo/mi_centinela_completo.svg" alt="Mi Centinela"></div>
+  </div>
+
+  <h1>SVG animado: solo escudo</h1>
+  <div class="fila">
+    <div class="caja clara"><img class="escudo" src="solo_escudo/mi_centinela_escudo.svg" alt="Mi Centinela"></div>
+    <div class="caja oscura">
+      <img class="escudo" src="solo_escudo/mi_centinela_escudo.svg" alt="Mi Centinela">
+      <img class="chico" src="solo_escudo/mi_centinela_escudo.svg" alt="Mi Centinela">
+    </div>
+  </div>
+
+  <h1>Código para tu web</h1>
+<pre>&lt;img src="mi_centinela_completo.svg" alt="Mi Centinela" width="420"&gt;
+&lt;img src="mi_centinela_escudo.svg" alt="Mi Centinela" width="120"&gt;</pre>
+</main>
+</body>
+</html>

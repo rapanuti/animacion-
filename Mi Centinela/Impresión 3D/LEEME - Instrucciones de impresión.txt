@@ -1,0 +1,66 @@
+MI CENTINELA: LOGO PARA IMPRESIÓN 3D
+====================================
+
+Medidas de la pieza: 120 x 36,5 x 6,2 mm (los archivos están en milímetros)
+Orientación: acostada sobre la base, tal como viene. No necesita soportes.
+Vista previa: vista_previa.png
+
+Estructura (alturas desde la cama):
+  0,0 - 2,0 mm   base blanca de esquinas redondeadas
+  2,0 - 3,5 mm   texto "Mi Centinela" y punto azul de la i
+  2,0 - 4,7 mm   escudo (borde azul, mitad izquierda azul, mitad derecha azul marino)
+  4,7 - 6,2 mm   ojo (blanco, iris azul, pupila azul marino, brillo blanco)
+
+Todas las mallas están verificadas como cerradas (sin agujeros).
+
+
+QUÉ ARCHIVO USAR
+----------------
+
+1_3MF_recomendado/  (el mejor formato para slicers modernos)
+   - mi_centinela_multicolor.3mf
+       Un solo objeto con 5 partes ya alineadas, cada una con su color.
+       Ideal para Bambu Studio, OrcaSlicer, PrusaSlicer y Cura con AMS/MMU.
+       Al abrirlo, asignar un filamento a cada parte (ver colores abajo).
+   - mi_centinela_un_color.3mf
+       Todo en una sola malla, para imprimir en un solo color.
+
+2_STL/  (el formato universal: funciona en cualquier slicer)
+   - mi_centinela_una_pieza.stl    -> un solo color
+   - por_color/  -> 5 archivos, uno por color. Importarlos TODOS A LA VEZ
+       y aceptar "¿Cargar como un solo objeto con varias partes?" para
+       que queden alineados.
+
+3_OBJ_con_colores/  (.obj + .mtl, deben ir juntos)
+   Modelo con colores. Bambu Studio y OrcaSlicer pueden leer los colores.
+
+4_PLY_con_colores/
+   Modelo con color por vértice, para visores 3D, servicios de impresión
+   a todo color (polvo/resina a color) u otros programas.
+
+5_Blender_editable/
+   Archivo original de Blender (mi_centinela.blend), por si hay que
+   modificar el diseño.
+
+
+COLORES (5 filamentos)
+----------------------
+  Parte 1  base_blanco       Blanco         #F2F2F2
+  Parte 2  azul              Azul           #2F72D6  (borde, mitad izq., iris, punto de la i)
+  Parte 3  azul_marino       Azul marino    #14315C  (mitad der., pupila, "Centinela")
+  Parte 4  blanco_ojo        Blanco         #FFFFFF  (puede ser el mismo blanco de la base)
+  Parte 5  gris_azulado      Gris azulado   #4B5C72  ("Mi")
+
+Si solo hay 4 colores: usar el mismo blanco para las partes 1 y 4.
+Si solo hay 1 color: imprimir "una pieza" con un cambio de filamento
+por altura a los 2,0 mm (la base sale de un color y el logo de otro).
+
+
+SUGERENCIAS DE IMPRESIÓN
+------------------------
+  Altura de capa: 0,12 - 0,2 mm (0,12 da más detalle en el ojo)
+  Boquilla: 0,4 mm
+  Relleno: 15 - 20 %
+  Material: PLA
+  Se puede escalar en el slicer si se necesita otro tamaño
+  (a menos de 90 mm de ancho, el brillo del ojo queda muy pequeño).

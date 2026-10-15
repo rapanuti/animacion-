@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Centinela · Video web</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f4f6f8; color: #14315c; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.4rem; }
+  .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .caja { border-radius: 12px; padding: 24px; display: grid; place-items: center; min-height: 160px; }
+  .clara { background: #ffffff; }
+  .oscura { background: #0f1e36; }
+  .completo { width: 100%; max-width: 420px; height: auto; }
+  .escudo { width: 120px; height: auto; }
+  pre { background: #fff; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: .8rem; }
+  @media (max-width: 600px) { .fila { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Video web: logo completo</h1>
+  <div class="fila">
+    <div class="caja clara">
+      <video class="completo" autoplay loop muted playsinline poster="logo_completo/mi_centinela_completo_portada.png">
+        <source src="logo_completo/mi_centinela_completo.webm" type="video/webm">
+        <source src="logo_completo/mi_centinela_completo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="caja oscura">
+      <video class="completo" autoplay loop muted playsinline poster="logo_completo/mi_centinela_completo_portada.png">
+        <source src="logo_completo/mi_centinela_completo.webm" type="video/webm">
+        <source src="logo_completo/mi_centinela_completo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <h1>Video web: solo escudo</h1>
+  <div class="fila">
+    <div class="caja clara">
+      <video class="escudo" autoplay loop muted playsinline poster="solo_escudo/mi_centinela_escudo_portada.png">
+        <source src="solo_escudo/mi_centinela_escudo.webm" type="video/webm">
+        <source src="solo_escudo/mi_centinela_escudo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="caja oscura">
+      <video class="escudo" autoplay loop muted playsinline poster="solo_escudo/mi_centinela_escudo_portada.png">
+        <source src="solo_escudo/mi_centinela_escudo.webm" type="video/webm">
+        <source src="solo_escudo/mi_centinela_escudo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <h1>Código para tu web</h1>
+<pre>&lt;video autoplay loop muted playsinline width="420"
+       poster="mi_centinela_completo_portada.png"&gt;
+  &lt;source src="mi_centinela_completo.webm" type="video/webm"&gt;
+  &lt;source src="mi_centinela_completo.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</pre>
+</main>
+</body>
+</html>

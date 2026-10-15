@@ -1,0 +1,68 @@
+MI CENTINELA: ANIMACIÓN DEL OJO PARA LA WEB
+===========================================
+
+Animación: el ojo parpadea suavemente y el iris mira a la izquierda, luego a la
+derecha, y vuelve al centro. Dura 6 segundos y se repite en bucle.
+
+Cada formato viene en dos versiones:
+  - logo_completo/  -> escudo + "Mi Centinela"
+  - solo_escudo/    -> solo el escudo con el ojo (para íconos, favicon animado, botones)
+
+Cada carpeta trae un "ejemplo.html" con las dos versiones sobre fondo claro y
+oscuro, y el código listo para copiar.
+Para ver los ejemplos en tu computadora, abre una terminal en esta carpeta
+(Animación) y ejecuta:
+    python3 -m http.server 8765
+y entra a http://localhost:8765 en el navegador.
+(Los videos y los SVG también se pueden abrir con doble clic, pero el modelo 3D
+necesita ese servidor.)
+
+
+1_Video_web/  — el más fácil, se ve igual que en Blender
+------------------------------------------------------
+  .webm  video con FONDO TRANSPARENTE (Chrome, Edge, Firefox, Android)
+  .mp4   respaldo con fondo blanco (Safari / iPhone)
+  _portada.png  imagen que se muestra mientras carga el video
+
+  <video autoplay loop muted playsinline poster="mi_centinela_completo_portada.png">
+    <source src="mi_centinela_completo.webm" type="video/webm">
+    <source src="mi_centinela_completo.mp4" type="video/mp4">
+  </video>
+
+  Nota: en Safari la transparencia del WebM no está garantizada; si tu web
+  tiene fondo blanco, el respaldo MP4 se verá perfecto. Si tiene otro color,
+  se puede generar el MP4 con ese color de fondo (generar_video.py, FONDO_MP4).
+
+
+2_SVG_animado/  — el más liviano y nítido (recomendado para la web)
+------------------------------------------------------------------
+  Pesa ~15 KB (logo completo) y ~8 KB (escudo). Se ve perfecto en cualquier
+  tamaño y pantalla, con fondo transparente en todos los navegadores.
+  La animación va dentro del archivo (CSS); no necesita JavaScript.
+  Las letras están convertidas a trazos: no hace falta cargar la fuente.
+  Si el visitante tiene activado "reducir movimiento", el logo queda quieto.
+
+  <img src="mi_centinela_completo.svg" alt="Mi Centinela" width="420">
+
+
+3_Modelo_3D_GLB/  — 3D real, se puede girar con el mouse o el dedo
+-----------------------------------------------------------------
+  Archivo glTF binario con la animación "Parpadeo_y_mirada".
+  Se muestra con <model-viewer> (gratis, de Google):
+
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+  <model-viewer src="mi_centinela_escudo.glb" alt="Mi Centinela"
+    autoplay animation-name="Parpadeo_y_mirada" camera-controls
+    style="width: 240px; height: 240px"></model-viewer>
+
+  Diferencia: en el 3D el iris se mueve un poco menos que en el video y el SVG
+  (el formato glTF no permite recortar el iris con la forma del ojo).
+
+
+Para regenerar (si cambia el logo o la animación):
+  cd "Mi Centinela/Animación"
+  blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- completo
+  blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- escudo
+  blender --background mi_centinela_animacion.blend --python 2_SVG_animado/generar_svg.py
+  blender --background mi_centinela_animacion.blend --python 3_Modelo_3D_GLB/generar_glb.py

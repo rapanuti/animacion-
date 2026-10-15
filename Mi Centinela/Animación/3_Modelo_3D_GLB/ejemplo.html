@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Centinela · Modelo 3D</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f4f6f8; color: #14315c; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.4rem; }
+  p { color: #4b5c72; }
+  .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .clara { background: #ffffff; }
+  .oscura { background: #0f1e36; }
+  model-viewer { width: 100%; height: 260px; border-radius: 12px; --poster-color: transparent; }
+  pre { background: #fff; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: .8rem; }
+  @media (max-width: 600px) { .fila { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Modelo 3D: logo completo</h1>
+  <p>Arrastra con el mouse (o el dedo) para girarlo.</p>
+  <div class="fila">
+    <model-viewer class="clara" src="logo_completo/mi_centinela_completo.glb" alt="Mi Centinela"
+      autoplay animation-name="Parpadeo_y_mirada" camera-controls disable-zoom
+      interaction-prompt="none" shadow-intensity="0.6" exposure="1.1"></model-viewer>
+    <model-viewer class="oscura" src="logo_completo/mi_centinela_completo.glb" alt="Mi Centinela"
+      autoplay animation-name="Parpadeo_y_mirada" camera-controls disable-zoom
+      interaction-prompt="none" exposure="1.2"></model-viewer>
+  </div>
+
+  <h1>Modelo 3D: solo escudo</h1>
+  <div class="fila">
+    <model-viewer class="clara" src="solo_escudo/mi_centinela_escudo.glb" alt="Mi Centinela"
+      autoplay animation-name="Parpadeo_y_mirada" camera-controls disable-zoom
+      interaction-prompt="none" shadow-intensity="0.6" exposure="1.1"></model-viewer>
+    <model-viewer class="oscura" src="solo_escudo/mi_centinela_escudo.glb" alt="Mi Centinela"
+      autoplay animation-name="Parpadeo_y_mirada" camera-controls disable-zoom
+      interaction-prompt="none" exposure="1.2" auto-rotate rotation-per-second="20deg"></model-viewer>
+  </div>
+
+  <h1>Código para tu web</h1>
+<pre>&lt;script type="module"
+  src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"&gt;&lt;/script&gt;
+
+&lt;model-viewer src="mi_centinela_escudo.glb" alt="Mi Centinela"
+  autoplay animation-name="Parpadeo_y_mirada"
+  camera-controls disable-zoom interaction-prompt="none"
+  style="width: 240px; height: 240px"&gt;&lt;/model-viewer&gt;</pre>
+</main>
+</body>
+</html>

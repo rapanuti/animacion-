@@ -1,0 +1,72 @@
+JOSÉ DANIEL: FIGURA PARA IMPRESIÓN 3D
+=====================================
+
+Medidas: 67,5 x 38,8 x 90 mm de alto (los archivos están en milímetros)
+Orientación: de pie sobre su base redonda, tal como viene.
+Vista previa: vista_previa.png
+
+IMPORTANTE: SOPORTES
+La visera, el borde de la gorra, el pelo y la parte de abajo de la cabeza
+quedan "en el aire". Se necesitan soportes: se recomiendan los de tipo árbol
+("tree" / "organic"), que se quitan fácil y dejan menos marcas.
+
+Todas las mallas están verificadas como cerradas (sin agujeros), y las piezas
+de distintos colores no se superponen entre sí: encajan unas con otras.
+
+
+QUÉ ARCHIVO USAR
+----------------
+
+1_3MF_recomendado/  (el mejor formato para slicers modernos)
+   - jose_daniel_multicolor.3mf
+       Un solo objeto con 6 partes ya alineadas, cada una con su color.
+       Para Bambu Studio, OrcaSlicer, PrusaSlicer o Cura con AMS/MMU.
+       Al abrirlo, asignar un filamento a cada parte (ver colores abajo).
+   - jose_daniel_un_color.3mf
+       Todo en una sola malla, para imprimir en un solo color (y pintar a mano).
+
+2_STL/  (el formato universal: funciona en cualquier slicer)
+   - jose_daniel_una_pieza.stl    -> un solo color
+   - por_color/  -> 6 archivos, uno por color. Importarlos TODOS A LA VEZ
+       y aceptar "¿Cargar como un solo objeto con varias partes?" para
+       que queden alineados.
+
+3_OBJ_con_colores/  (.obj + .mtl, deben ir juntos)
+   Modelo con colores. Bambu Studio y OrcaSlicer pueden leer los colores.
+
+4_PLY_con_colores/
+   Modelo con color por vértice, para visores 3D o servicios de impresión
+   a todo color (polvo o resina a color).
+
+5_Blender_editable/
+   Archivo original de Blender (jose_daniel.blend). También trae la
+   animación del personaje.
+
+
+COLORES (6 filamentos)
+----------------------
+  Parte 1  base_gris_oscuro    Gris oscuro    #3C3C3C  (base redonda)
+  Parte 2  cuerpo_gris_claro   Gris claro     #C8C8C8  (cuerpo)
+  Parte 3  piel                Piel / beige   #B6946E  (cara y párpados)
+  Parte 4  negro               Negro          #111111  (pelo, parte negra de los ojos, boca)
+  Parte 5  gorra_gris_metal    Gris / plata   #7D7D7D  (gorra y visera)
+  Parte 6  blanco              Blanco         #FFFFFF  (base blanca de los ojos y brillo)
+
+Si solo hay 4 colores: la base y la gorra en el mismo gris, y el cuerpo en blanco
+(junto con la parte 6).
+Si solo hay 1 color: imprimir "una pieza" y pintar a mano.
+
+Detalle: los ojos, la boca y el brillo sobresalen menos de 1 mm. Se ven
+mejor con altura de capa fina y con multicolor; en un solo color quedan
+como relieve suave.
+
+
+SUGERENCIAS DE IMPRESIÓN
+------------------------
+  Altura de capa: 0,12 mm (recomendado por los detalles de la cara)
+  Boquilla: 0,4 mm
+  Relleno: 15 %
+  Soportes: sí, tipo árbol
+  Material: PLA
+  Se puede escalar en el slicer. A menos de 70 mm de alto, los brillos
+  de los ojos se pierden.
