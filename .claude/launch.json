@@ -4,8 +4,44 @@
     {
       "name": "animacion-mi-centinela",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8765", "--bind", "127.0.0.1", "--directory", "Mi Centinela/Animación"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "Mi Centinela/Animación"
+      ],
       "port": 8765
+    },
+    {
+      "name": "rapanuti",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8766",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "Rapanuti"
+      ],
+      "port": 8766
+    },
+    {
+      "name": "jose-daniel-video",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8767",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "José Daniel/Video_redes"
+      ],
+      "port": 8767
     }
   ]
 }
