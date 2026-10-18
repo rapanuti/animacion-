@@ -1,0 +1,52 @@
+RAPANUTI: LOGO DIGITALIZADO
+===========================
+
+El logo tiene dos partes:
+  - Ícono "R": letra geométrica de tres piezas con cortes diagonales paralelos (~40°).
+  - Palabra "Rapanuti".
+La base del ícono coincide con la línea base del texto, y el pilar izquierdo del ícono
+baja un poco por debajo de ella, como en el original.
+
+
+TIPOGRAFÍA
+----------
+  Montserrat Medium (peso 500)
+  Espaciado entre letras: -0.035em (-3,5 %), uniforme
+  Gratuita, de Google Fonts, licencia SIL Open Font License (puede usarse en web,
+  impresos y productos sin pagar). Los archivos .ttf y la licencia están en fuentes/.
+
+  En la web:
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+    font-family: "Montserrat", sans-serif; font-weight: 500; letter-spacing: -0.035em;
+
+
+COLORES
+-------
+  Azul marino   #132136   logo sobre fondo claro (medido del original)
+  Blanco        #FFFFFF   logo sobre fondo oscuro
+  Fondo claro sugerido   #F4F6F8
+  Fondo oscuro sugerido  #0E1726
+
+
+ARCHIVOS
+--------
+  svg/      Vector plano (el más nítido, para web e imprenta; letras convertidas a trazos)
+              rapanuti_fondo_claro.svg   rapanuti_fondo_oscuro.svg
+              icono_r_fondo_claro.svg    icono_r_fondo_oscuro.svg
+  render/   Imágenes 3D hechas en Blender (relieve con bordes biselados)
+              rapanuti_fondo_claro.png / _oscuro.png            de frente, con fondo
+              rapanuti_fondo_claro_transparente.png / _oscuro    de frente, sin fondo
+              rapanuti_3d_claro.png / _oscuro.png                en perspectiva
+              icono_r_fondo_claro.png / _oscuro (+ _transparente)  ícono solo, 1024 x 1024
+  rapanuti.blend     Escena 3D (la fuente va empaquetada dentro del archivo)
+  ejemplo.html       Vista previa de todo + colores y tipografía
+  referencia.png     Imagen original
+
+
+PARA REGENERAR
+--------------
+  python3 blender_bridge/send.py "Rapanuti/logo_rapanuti.py"     (arma el logo en el Blender abierto)
+  cd Rapanuti
+  blender --background rapanuti.blend --python renderizar.py      (renders claro / oscuro)
+  blender --background rapanuti.blend --python exportar_svg.py    (SVG)
+  En logo_rapanuti.py, aplicar_tema("claro") o aplicar_tema("oscuro") cambia los colores.

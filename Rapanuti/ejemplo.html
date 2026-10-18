@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapanuti · Logo</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #e9edf2; color: #132136; }
+  main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 12px; }
+  p { margin: 4px 0; color: #3d4a5e; }
+  .fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .caja { border-radius: 12px; padding: 28px; display: grid; place-items: center; min-height: 120px; }
+  .clara { background: #f4f6f8; }
+  .oscura { background: #0e1726; }
+  .caja img { width: 100%; max-width: 400px; height: auto; }
+  .caja img.icono { width: 96px; }
+  .render img { width: 100%; border-radius: 12px; display: block; }
+  .muestras { display: flex; gap: 12px; flex-wrap: wrap; }
+  .muestra { display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 10px; padding: 10px 14px; }
+  .muestra i { width: 32px; height: 32px; border-radius: 6px; display: block; border: 1px solid #cfd6df; }
+  .tipo { background: #fff; border-radius: 12px; padding: 20px; }
+  .tipo .grande { font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 2.6rem; letter-spacing: -0.035em; }
+  code { background: #fff; padding: 2px 6px; border-radius: 4px; }
+  @media (max-width: 600px) { .fila { grid-template-columns: 1fr; } }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+</head>
+<body>
+<main>
+  <h1>Rapanuti</h1>
+  <p>Logo digitalizado: ícono «R» + palabra en Montserrat Medium.</p>
+
+  <h2>Vector (SVG): fondo claro y fondo oscuro</h2>
+  <div class="fila">
+    <div class="caja clara"><img src="svg/rapanuti_fondo_claro.svg" alt="Rapanuti"></div>
+    <div class="caja oscura"><img src="svg/rapanuti_fondo_oscuro.svg" alt="Rapanuti"></div>
+    <div class="caja clara"><img class="icono" src="svg/icono_r_fondo_claro.svg" alt="Rapanuti"></div>
+    <div class="caja oscura"><img class="icono" src="svg/icono_r_fondo_oscuro.svg" alt="Rapanuti"></div>
+  </div>
+
+  <h2>3D (Blender): de frente</h2>
+  <div class="fila render">
+    <img src="render/rapanuti_fondo_claro.png" alt="Rapanuti 3D fondo claro">
+    <img src="render/rapanuti_fondo_oscuro.png" alt="Rapanuti 3D fondo oscuro">
+  </div>
+
+  <h2>3D (Blender): en perspectiva</h2>
+  <div class="fila render">
+    <img src="render/rapanuti_3d_claro.png" alt="Rapanuti 3D en perspectiva, fondo claro">
+    <img src="render/rapanuti_3d_oscuro.png" alt="Rapanuti 3D en perspectiva, fondo oscuro">
+  </div>
+
+  <h2>Colores</h2>
+  <div class="muestras">
+    <div class="muestra"><i style="background:#132136"></i><span>Azul marino <code>#132136</code> · logo en fondo claro</span></div>
+    <div class="muestra"><i style="background:#ffffff"></i><span>Blanco <code>#FFFFFF</code> · logo en fondo oscuro</span></div>
+    <div class="muestra"><i style="background:#f4f6f8"></i><span>Fondo claro sugerido <code>#F4F6F8</code></span></div>
+    <div class="muestra"><i style="background:#0e1726"></i><span>Fondo oscuro sugerido <code>#0E1726</code></span></div>
+  </div>
+
+  <h2>Tipografía</h2>
+  <div class="tipo">
+    <div class="grande">Rapanuti</div>
+    <p><strong>Montserrat Medium (500)</strong>, con espaciado entre letras de <code>-0.035em</code> (−3,5 %).</p>
+    <p>Gratuita, de Google Fonts (licencia SIL Open Font License).</p>
+  </div>
+</main>
+</body>
+</html>
