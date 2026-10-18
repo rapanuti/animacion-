@@ -1,0 +1,93 @@
+CELULARES: MODELOS 3D PARA TRABAJAR EN BLENDER
+==============================================
+Búsqueda hecha el 18 de octubre de 2026. Todavía no se descargó nada.
+
+Licencia CC BY 4.0 = gratis, se puede usar incluso en trabajos comerciales,
+pero hay que dar crédito al autor (por ejemplo, en la descripción del video o de la web).
+Todos estos modelos de Sketchfab también se pueden bajar en formato glTF/GLB, que Blender
+abre directamente (Archivo > Importar > glTF).
+
+
+GRATIS (CC BY 4.0), CONFIRMADOS EN SU PÁGINA
+--------------------------------------------
+1. Modern Generic Smartphone · autor: Ottto3d
+   Liviano (2.700 triángulos), tamaño real 15 x 7,5 cm, hecho en Blender 3.2.
+   Formatos: BLEND, FBX y OBJ. La pantalla se puede cambiar por tu propia imagen.
+   ★ El más práctico para empezar y para animar.
+   https://sketchfab.com/3d-models/modern-generic-smartphone-cb96f6c19c6c416f8f52a127dd6ec05b
+
+2. Samsung Phone · autor: DAKSH_2009 (crédito: "Daksh Meshram")
+   Detalle medio (53.000 triángulos). Formato: GLB. Para renders de producto y mockups de apps.
+   https://sketchfab.com/3d-models/samsung-phone-606d87c8f22d4e0ebbd45f2ab4e1cc15
+
+3. Smartphone 3D Model · autor: Asher Dipprey
+   Detalle alto (139.000 triángulos), estilo iPhone / Galaxy, texturas fáciles de cambiar en Blender.
+   https://sketchfab.com/3d-models/smartphone-3d-model-d877184c9c33444190d747c824bcc55e
+
+4. Modern smartphone · autor: Plane on the brain
+   Muy detallado (461.000 triángulos), "listo para Blender", pensado para animaciones.
+   https://sketchfab.com/3d-models/modern-smartphone-9b4670b0bc8b4f9ea095219ec8f146fb
+
+5. Sleek and simple smartphone · autor: Icefyre24
+   Genérico, sin marca, detalle medio-alto (115.000 triángulos).
+   Ojo: el autor prohíbe usarlo para entrenar inteligencia artificial generativa.
+   https://sketchfab.com/3d-models/sleek-and-simple-smartphone-eb664c0047e749a7a3ef92ea8dc73214
+
+6. Basic Smartphone · autor: kaikye
+   Sencillo (17.600 triángulos). Formato: OBJ. Hecho en Blender 2.82.
+   https://sketchfab.com/3d-models/basic-smartphone-a6ef6ff8c6d141f6ab17040f72f192ea
+
+7. Smartphone holded by hand · autor: Roberto Domínguez
+   Celular sostenido por una mano (319.000 triángulos). Bueno para mockups.
+   https://sketchfab.com/3d-models/smartphone-holded-by-hand-3e1449d6e1164c17b2a5c4772cd358f9
+
+
+GRATIS PERO CON LIMITACIONES (no confirmados en detalle)
+--------------------------------------------------------
+8. Phone · autor: Korvoid. Licencia CC BY-NC-SA: NO se puede usar comercialmente.
+   https://sketchfab.com/3d-models/phone-16b4ce605ead4c988f98a107a2f3ab51
+9. Smartphone with green screen · autor: peroroo. Licencia CC BY-SA: lo que hagas con él
+   debe compartirse con la misma licencia. Útil para poner videos en la pantalla.
+   https://sketchfab.com/3d-models/smartphone-with-green-screen-2c0b4558cd0d486e81583dd9921968c7
+10. Mobile Phone (3D CAD Browser). Archivo .blend, figura como gratis con uso comercial,
+   pero es de 2008 y muy pesado (257.000 polígonos).
+   https://www.3dcadbrowser.com/3d-model/mobile-phone
+11. Mobile (CTRL+A, Gumroad). Celular metálico para Blender, "gratis por tiempo limitado" ($0+).
+   https://ctrla.gumroad.com/l/mobile
+
+
+MODELOS DE MARCA REALISTAS (DE PAGO; precios vistos en la búsqueda)
+-------------------------------------------------------------------
+12. iPhone 16 Pro / Pro Max para Blender (Gumroad, slavaleks) · desde USD 20
+    https://slavaleks.gumroad.com/l/qrtqt
+13. iPhone 16 Pro en varios colores (RenderHub, jno-models) · precio en la página
+    https://www.renderhub.com/jno-models/apple-iphone-16-pro-black
+14. iPhone 15 Pro (Superhive Market) · USD 35, archivos de Blender Cycles
+    https://superhivemarket.com/products/apple-iphone-15-pro-v1
+15. iPhone 15 Pro realista (itch.io, fonzart) · desde USD 13, con .blend
+    https://fonzart.itch.io/realistic-iphone-15-pro-3d-model
+16. Samsung Galaxy S24 Ultra con efectos de píxeles (CGTrader) · USD 15, .blend (Cycles)
+    https://www.cgtrader.com/3d-models/electronics/phone/samsung-galaxy-s24-ultra-pixels-effects
+17. Samsung Galaxy S24 Ultra realista (Superhive Market) · USD 39, Blender Cycles
+    https://superhivemarket.com/products/samsung-galaxy-s24-ultra
+18. Colección completa Galaxy S24, todas las versiones y colores (CGTrader) · USD 90
+    https://www.cgtrader.com/3d-models/electronics/phone/full-collection-of-samsung-galaxy-s24-all-versions-and-colors
+19. Nothing Phone 3 con iluminación lista para Blender (CGTrader) · precio en la página
+    https://www.cgtrader.com/3d-models/electronics/phone/nothing-phone-3-blender-3d-model-with-lighting-setup
+
+
+OTRAS BIBLIOTECAS DONDE BUSCAR
+------------------------------
+- BlenderKit (complemento dentro de Blender): unos 17.000 modelos gratis, con filtro "Free only";
+  algunos celulares requieren el plan pago.   https://www.blenderkit.com
+- TurboSquid, filtro Blender + gratis:   https://www.turbosquid.com/Search/3D-Models/cellphone/blend
+- Free3D:   https://free3d.com/3d-model/smartphone-3112.html
+
+
+A TENER EN CUENTA
+-----------------
+- Los modelos con marca (Apple, Samsung) se pueden usar para renders, pero los logos
+  registrados no se deben usar en publicidad propia sin permiso de la marca. Para tus
+  proyectos (por ejemplo, mostrar Mi Centinela o Rapanuti en una pantalla) es más seguro un
+  modelo genérico como el n.º 1.
+- Las licencias las pone cada autor y pueden cambiar: revisar la página antes de descargar.

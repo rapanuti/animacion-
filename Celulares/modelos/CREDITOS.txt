@@ -1,0 +1,17 @@
+modern_generic_smartphone.glb
+
+"Modern Generic Smartphone" by Ottto3d (https://sketchfab.com/Ottto3ds)
+https://sketchfab.com/3d-models/modern-generic-smartphone-cb96f6c19c6c416f8f52a127dd6ec05b
+Licencia: Creative Commons Attribution 4.0 (CC BY 4.0) — http://creativecommons.org/licenses/by/4.0/
+
+Se puede usar gratis, también en trabajos comerciales, siempre que se dé crédito al autor.
+Texto sugerido para el crédito (descripción del video, pie de página, etc.):
+  Modelo del celular: "Modern Generic Smartphone" por Ottto3d, licencia CC BY 4.0.
+
+Descargado de Sketchfab el 18 de octubre de 2026 (formato GLB, texturas 2k).
+Cambio hecho al importarlo en Blender: material en modo "tramado" (dithered) en lugar de
+"mezclado", para que no se vea transparente en Eevee.
+
+Permiso adicional (octubre de 2026): según el dueño del proyecto (Oswaldo), el autor
+autorizó por correo usar este modelo en la web de MiCentinela sin atribución. Guardar ese
+correo como respaldo. El autor del modelo sigue siendo Ottto3d.
