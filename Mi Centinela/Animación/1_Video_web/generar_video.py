@@ -1,8 +1,8 @@
 # Genera los videos web de la animación del ojo de Mi Centinela.
 #   - WebM (VP9) con fondo transparente: para Chrome, Edge, Firefox y Android.
-#   - MP4 (H.264) sobre fondo blanco: respaldo para Safari / iPhone.
+#   - MP4 (H.264) sobre fondo blanco (o azul oscuro en la versión oscura): respaldo para Safari / iPhone.
 #   - PNG del primer cuadro: imagen de portada (poster) mientras carga el video.
-# Uso (variante: completo | escudo):
+# Uso (variante: completo | oscuro | escudo; "oscuro" = logo completo con texto claro para fondo oscuro):
 #   cd "Mi Centinela/Animación"
 #   blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- completo
 import bpy
@@ -12,10 +12,26 @@ import sys
 
 variante = sys.argv[sys.argv.index("--") + 1] if "--" in sys.argv else "completo"
 AQUI = os.path.join(os.path.dirname(bpy.data.filepath), "1_Video_web")
-SALIDA = os.path.join(AQUI, "logo_completo" if variante == "completo" else "solo_escudo")
-NOMBRE = "mi_centinela_completo" if variante == "completo" else "mi_centinela_escudo"
+CARPETA, NOMBRE = {
+    "completo": ("logo_completo", "mi_centinela_completo"),
+    "oscuro": ("logo_completo_fondo_oscuro", "mi_centinela_completo_oscuro"),
+    "escudo": ("solo_escudo", "mi_centinela_escudo"),
+}[variante]
+SALIDA = os.path.join(AQUI, CARPETA)
 CUADROS = os.path.join(AQUI, f"_cuadros_{variante}")
-FONDO_MP4 = (1.0, 1.0, 1.0)
+FONDO_MP4 = (15 / 255, 30 / 255, 54 / 255) if variante == "oscuro" else (1.0, 1.0, 1.0)   # #0f1e36 / blanco
+# Versión oscura: el escudo no cambia, solo el texto se aclara (mismos colores que el SVG)
+TEXTO_OSCURO = {"Mi": "#a9b8cc", "Centinela": "#ffffff", "Punto": "#3d8bff"}
+
+
+def lin(hexstr):
+    h = hexstr.lstrip("#")
+    out = []
+    for i in (0, 2, 4):
+        c = int(h[i:i + 2], 16) / 255
+        out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+    return (*out, 1.0)
+
 
 scene = bpy.context.scene
 cam = scene.camera
@@ -27,6 +43,10 @@ if variante == "escudo":
     ancho, alto = 600, 700
 else:
     ancho, alto = 1440, 380
+if variante == "oscuro":
+    for nombre, color in TEXTO_OSCURO.items():
+        bsdf = next(n for n in bpy.data.materials[nombre].node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+        bsdf.inputs["Base Color"].default_value = lin(color)
 
 # ---------------------------------------------------------------- 1) cuadros PNG transparentes
 r = scene.render

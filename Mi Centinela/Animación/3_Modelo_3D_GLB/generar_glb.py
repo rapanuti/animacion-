@@ -141,6 +141,13 @@ def exportar(ruta):
 
 
 exportar(os.path.join(AQUI, "logo_completo", "mi_centinela_completo.glb"))
+
+# versión para fondo oscuro: el escudo no cambia, solo el texto se aclara (mismos colores que el SVG)
+for nombre, color in {"Texto_Mi": "#a9b8cc", "Texto_Centinela": "#ffffff", "Punto_i": "#3d8bff"}.items():
+    mat = D[nombre].data.materials[0]
+    next(n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED").inputs["Base Color"].default_value = lin(color)
+exportar(os.path.join(AQUI, "logo_completo_fondo_oscuro", "mi_centinela_completo_oscuro.glb"))
+
 for nombre in ("Texto_Mi", "Texto_Centinela", "Punto_i"):
     bpy.data.objects.remove(D[nombre])
 # el escudo queda centrado (el Logo tenía el origen en el centro del escudo)

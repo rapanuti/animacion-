@@ -4,9 +4,12 @@ MI CENTINELA: ANIMACIÓN DEL OJO PARA LA WEB
 Animación: el ojo parpadea suavemente y el iris mira a la izquierda, luego a la
 derecha, y vuelve al centro. Dura 6 segundos y se repite en bucle.
 
-Cada formato viene en dos versiones:
-  - logo_completo/  -> escudo + "Mi Centinela"
-  - solo_escudo/    -> solo el escudo con el ojo (para íconos, favicon animado, botones)
+Cada formato viene en tres versiones:
+  - logo_completo/               -> escudo + "Mi Centinela" (para fondos claros)
+  - logo_completo_fondo_oscuro/  -> lo mismo con el texto claro (para fondos oscuros):
+                                    "Mi" gris claro #A9B8CC, "Centinela" blanco, punto #3D8BFF
+  - solo_escudo/                 -> solo el escudo con el ojo (sirve para fondos claros y
+                                    oscuros; para íconos, favicon animado, botones)
 
 Cada carpeta trae un "ejemplo.html" con las dos versiones sobre fondo claro y
 oscuro, y el código listo para copiar.
@@ -21,7 +24,7 @@ necesita ese servidor.)
 1_Video_web/  — el más fácil, se ve igual que en Blender
 ------------------------------------------------------
   .webm  video con FONDO TRANSPARENTE (Chrome, Edge, Firefox, Android)
-  .mp4   respaldo con fondo blanco (Safari / iPhone)
+  .mp4   respaldo para Safari / iPhone: fondo blanco (versión oscura: fondo azul #0F1E36)
   _portada.png  imagen que se muestra mientras carga el video
 
   <video autoplay loop muted playsinline poster="mi_centinela_completo_portada.png">
@@ -63,6 +66,7 @@ necesita ese servidor.)
 Para regenerar (si cambia el logo o la animación):
   cd "Mi Centinela/Animación"
   blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- completo
+  blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- oscuro
   blender --background mi_centinela_animacion.blend --python 1_Video_web/generar_video.py -- escudo
   blender --background mi_centinela_animacion.blend --python 2_SVG_animado/generar_svg.py
   blender --background mi_centinela_animacion.blend --python 3_Modelo_3D_GLB/generar_glb.py

@@ -21,6 +21,9 @@ COL = {
     "mi": "#4b5c72", "centinela": "#14315c", "punto": "#2f7de1",
 }
 
+# Versión para fondo oscuro: el escudo no cambia, solo el texto se aclara.
+COL_OSCURO = dict(COL, mi="#a9b8cc", centinela="#ffffff", punto="#3d8bff")
+
 deps = bpy.context.evaluated_depsgraph_get()
 bpy.context.scene.frame_set(1)
 
@@ -105,7 +108,7 @@ ESTILO = f"""
     }}"""
 
 
-def svg(con_texto, titulo):
+def svg(con_texto, titulo, COL=COL):
     xs = [x for x, _ in borde_pts]
     ys = [y for _, y in borde_pts]
     x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
@@ -155,11 +158,12 @@ def svg(con_texto, titulo):
 """
 
 
-for carpeta, archivo, con_texto, titulo in (
-        ("logo_completo", "mi_centinela_completo.svg", True, "Mi Centinela"),
-        ("solo_escudo", "mi_centinela_escudo.svg", False, "Mi Centinela (escudo)")):
+for carpeta, archivo, con_texto, titulo, colores in (
+        ("logo_completo", "mi_centinela_completo.svg", True, "Mi Centinela", COL),
+        ("logo_completo_fondo_oscuro", "mi_centinela_completo_oscuro.svg", True, "Mi Centinela", COL_OSCURO),
+        ("solo_escudo", "mi_centinela_escudo.svg", False, "Mi Centinela (escudo)", COL)):
     os.makedirs(os.path.join(AQUI, carpeta), exist_ok=True)
     ruta = os.path.join(AQUI, carpeta, archivo)
     with open(ruta, "w", encoding="utf-8") as f:
-        f.write(svg(con_texto, titulo))
+        f.write(svg(con_texto, titulo, colores))
     print("SVG_LISTO", ruta, os.path.getsize(ruta), "bytes")
