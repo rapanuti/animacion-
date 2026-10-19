@@ -1,0 +1,13 @@
+dome_camera_free.glb
+
+"Dome Camera [FREE]" by MiguelRamos (https://sketchfab.com/MiguelNevesRamos)
+https://sketchfab.com/3d-models/dome-camera-free-ab8d2a64d3894deba9af23203ba0368d
+Licencia: Creative Commons Attribution 4.0 (CC BY 4.0) — http://creativecommons.org/licenses/by/4.0/
+
+Se puede usar gratis, también en trabajos comerciales, siempre que se dé crédito al autor.
+Texto para el crédito: Modelo 3D de la cámara: "Dome Camera [FREE]" por MiguelRamos, licencia CC BY 4.0.
+
+Descargado de Sketchfab el 19 de octubre de 2026 (GLB). exportar_domo_free.py lo reorienta para
+colgar del techo, separa la bola del lente ("Ojo") de la base y lo exporta para el sitio.
+
+NO usar "Dome Security Camera" de Futuro Visual: es CC BY-NC (prohíbe el uso comercial).

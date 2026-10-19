@@ -58,5 +58,10 @@ va dentro de la carpeta de ese proyecto, y antes de construir se abre su `.blend
   ahumado y Ojo, el módulo del lente con su origen en el centro de giro y mirando a -Y), guarda
   `camara_domo.blend`, renderiza `render/camara_domo.png` y exporta `web/camara_domo.glb` para el
   sitio (website/public/models/). Blender está en español: busca nodos por tipo, no por nombre.
+  `exportar_domo_free.py` prepara la cámara que usa hoy el sitio: "Dome Camera [FREE]" de
+  MiguelRamos (CC BY 4.0, en `modelos/` con su `CREDITOS.txt`). La cuelga del techo, separa la
+  bola del lente ("Ojo"), descarta la copia duplicada del cuerpo ("Electrics_Glass"), le da metal
+  satinado y le agrega el LED rojo "LedRec"; exporta `web/camara_domo_free.glb` y
+  `render/camara_domo_free.png`. **No usar "Dome Security Camera" de Futuro Visual (CC BY-NC).**
 - Cada diseño nuevo sigue el mismo patrón: `<nombre>.blend`, script que lo arma, `render/`
   y, si se imprime, `Impresión 3D/` + ZIP.
