@@ -19,7 +19,7 @@ Proyecto para trabajar en Blender junto con Claude. El usuario habla español.
 ## Estructura: una carpeta por diseño
 
 **Regla del usuario:** antes de empezar cualquier trabajo en Blender, preguntar en qué
-proyecto (carpeta) se va a trabajar (Mi Centinela, José Daniel, Rapanuti, Celulares o uno nuevo), salvo que el
+proyecto (carpeta) se va a trabajar (Mi Centinela, José Daniel, Rapanuti, Celulares, Cámaras o uno nuevo), salvo que el
 usuario ya lo haya dicho en ese mensaje. Todo lo que se genere (.blend, renders, exportaciones)
 va dentro de la carpeta de ese proyecto, y antes de construir se abre su `.blend` en Blender.
 
@@ -53,5 +53,10 @@ va dentro de la carpeta de ese proyecto, y antes de construir se abre su `.blend
   `exportar_web.py` genera `web/celular.glb` para el sitio de MiCentinela (website/public/models/):
   origen en el centro de la pantalla, 1 unidad = ancho de pantalla, material opaco, texturas WebP
   1024. Se corre con `blender --background --python Celulares/exportar_web.py`.
+- `Cámaras/`: cámara domo de seguridad para El Ojo de Odin, modelada desde cero (sin licencias de
+  terceros). `camara_domo.py` arma la escena (piezas Base con anillo azul de marca, Domo de vidrio
+  ahumado y Ojo, el módulo del lente con su origen en el centro de giro y mirando a -Y), guarda
+  `camara_domo.blend`, renderiza `render/camara_domo.png` y exporta `web/camara_domo.glb` para el
+  sitio (website/public/models/). Blender está en español: busca nodos por tipo, no por nombre.
 - Cada diseño nuevo sigue el mismo patrón: `<nombre>.blend`, script que lo arma, `render/`
   y, si se imprime, `Impresión 3D/` + ZIP.
